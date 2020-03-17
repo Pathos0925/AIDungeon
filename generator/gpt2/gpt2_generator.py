@@ -116,8 +116,8 @@ class GPT2Generator:
 
     def generate(self, prompt, options=None, seed=1):
 
-        debug_print = False
-        prompt = self.prompt_replace(prompt)
+        debug_print = True
+        #prompt = self.prompt_replace(prompt)
 
         if debug_print:
             print("******DEBUG******")
@@ -130,7 +130,7 @@ class GPT2Generator:
             print("******END DEBUG******")
 
         result = text
-        result = self.result_replace(result)
+        #result = self.result_replace(result)
         if len(result) == 0:
             return self.generate(prompt)
 
