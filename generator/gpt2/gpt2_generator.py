@@ -14,14 +14,14 @@ tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.ERROR)
 
 
 class GPT2Generator:
-    def __init__(self, generate_num=60, temperature=0.4, top_k=40, top_p=0.9, censor=True, force_cpu=False):
+    def __init__(self, generate_num=60, temperature=0.6, top_k=40, top_p=0.9, censor=False, force_cpu=False):
         self.generate_num = generate_num
         self.temp = temperature
         self.top_k = top_k
         self.top_p = top_p
         self.censor = censor
 
-        self.model_name = "model_v5"
+        self.model_name = "run4"
         self.model_dir = "generator/gpt2/models"
         self.checkpoint_path = os.path.join(self.model_dir, self.model_name)
 
